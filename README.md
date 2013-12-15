@@ -130,17 +130,23 @@ Installation
 
 ### Setup Manually
 
-* Install Qt 5.2
 * Prepare prebuild interpreter.
 
-  * See: https://github.com/shibukawa/qtwidget.js
+See: https://github.com/shibukawa/qtwidget.js
 
 * Install JSX
 
-Compile your code and copy it as qtwidget.app/Content/Resources/js_src/main.js,
-`qtwidgetjs.app` launches your script when booting.
+`npm install jsx` or `sudo npm install -g jsx`.
 
-### Recommended Process
+* Comple your code and deploy
+
+You can compile your code with the following command:
+
+`jsx --add-search-path qt5.jsx/src --output yourcode.js youcode.jsx`
+
+Compile your code and copy it as `qtwidget.app/Content/Resources/js_src/main.js` (for mac) or `js_src/main.js` (for windows).
+
+### Recommended Process (future)
 
 It recommends create application via `jsx-init`
 
@@ -162,6 +168,10 @@ Download runtime binary or build QtWidget runner and put it at the same folder. 
 ```
 $ grunt build
 ```
+
+### Build Your own Interpreter
+
+See development section.
 
 API Reference
 ------------------
