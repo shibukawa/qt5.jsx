@@ -22,9 +22,11 @@ module.exports = function(grunt) {
 
     jsx: {
       build: {
-        src: ['<%= sampleDir %>/*.jsx'],
+        src: ['<%= sampleDir %>/analog.jsx'],
+        output: 'main.js',
         add_search_path: libDirs,
-        dest: '<%= sampleDir %>/'
+        dest: '<%= sampleDir %>/',
+        executable: 'node'
       },
 
       test: {

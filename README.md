@@ -128,6 +128,20 @@ class _Main {
 Installation
 ---------------
 
+### Setup Manually
+
+* Install Qt 5.2
+* Prepare prebuild interpreter.
+
+  * See: https://github.com/shibukawa/qtwidget.js
+
+* Install JSX
+
+Compile your code and copy it as qtwidget.app/Content/Resources/js_src/main.js,
+`qtwidgetjs.app` launches your script when booting.
+
+### Recommended Process
+
 It recommends create application via `jsx-init`
 
 ```sh
@@ -152,33 +166,23 @@ $ grunt build
 API Reference
 ------------------
 
-See Qt 5.2 document.
+See doc folder and Qt 5.2 document.
 
 Development
 -------------
 
 ## Repository
 
-* Repository: git://github.com/shibukawa/qt5.jsx.git
+* Runtime: https://github.com/shibukawa/qtwidget.js
+* QT Binding Generator: https://github.com/shibukawa/qtscriptgenerator
+* Repository: https://github.com/shibukawa/qt5.js
 * Issues: https://github.com/shibukawa/qt5.jsx/issues
 
-## Run Test
+Checkout qtwidget.js repository and run `makebinding.sh` or `makebinding.bat` then you will get JS to Qt binding and JSX to JS binding and document.
 
-```sh
-$ grunt test
-```
+To add more class support, you should modify `qtwidget/third_party/qtscriptgenerator/generator/typesytem_*`.
 
-## Build Sample
-
-```sh
-$ grunt build
-```
-
-## Generate API reference
-
-```sh
-$ grunt doc
-```
+If you want to add more modules, you should add type system XML files and project files at `qtwidget/third_party/qtscriptgenerator/qtbindings`.
 
 Author
 ---------
