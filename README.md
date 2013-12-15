@@ -130,9 +130,13 @@ Installation
 
 ### Setup Manually
 
+* Install build Qt 5.2.0
+
+Now prebuild interpreter for Windows needs mingw4.8 32 bit library.
+
 * Prepare prebuild interpreter.
 
-See: https://github.com/shibukawa/qtwidget.js
+See: https://github.com/shibukawa/qtwidget.js/releases/
 
 * Install JSX
 
@@ -142,9 +146,11 @@ See: https://github.com/shibukawa/qtwidget.js
 
 You can compile your code with the following command:
 
-`jsx --add-search-path qt5.jsx/src --output yourcode.js youcode.jsx`
+`jsx --add-search-path qt5.jsx/src --executable node --output yourcode.js youcode.jsx`
 
 Compile your code and copy it as `qtwidget.app/Content/Resources/js_src/main.js` (for mac) or `js_src/main.js` (for windows).
+
+Executable(qtwidget.app, qtwidget.exe) doesn't include needed dynamic frameworks/libraries. You should have to collect them. See [these](http://qt-project.org/doc/qt-5/deployment.html) documents. `macdeployqt` or `windeployqt` will help you.
 
 ### Recommended Process (future)
 
